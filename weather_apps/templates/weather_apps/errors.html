@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка данных</title>
+    <link rel="stylesheet" href="{% static 'weather_apps/index.css'%}">
+</head>
+<body>
+<p>Не корректные данные {{errors}}</p>
+<form action="/">
+   <button>На главную</button>
+</form>
+</body>
+</html>

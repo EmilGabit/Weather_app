@@ -1,0 +1,6 @@
+Django~=5.0.2
+openmeteo_requests~=1.2.0
+pandas~=2.2.2
+geopy~=2.4.1
+requests-cache~=1.2.1
+retry-requests~=2.0.0

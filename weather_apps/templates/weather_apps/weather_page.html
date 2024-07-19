@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+    <link rel="stylesheet" href="{% static 'weather_apps/index.css'%}">
+</head>
+<body>
+<h2>Приложение погода</h2>
+
+<ul class = "form-style">
+{% for weather in weathers %}
+  <p>  Дата:{{ weather.0|date:"SHORT_DATE_FORMAT"  }}
+    Время: {{  weather.0|time:"H:i" }}
+    Температура: {{weather.1|floatformat:"0" }} C
+    Вероятность осадков: {{weather.2 }} %
+    <br>
+  </p>
+{% endfor %}
+</ul>
+<form action="/">
+   <button>Назад</button>
+</form>
+</body>
+</html>
